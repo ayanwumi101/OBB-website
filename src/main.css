@@ -7,10 +7,10 @@
     font-family: inter;
 }
 
-.img{
+/* .img{
     width: 100%;
     height: 550px;
-}
+} */
 
 .line{
     width: 90px;
@@ -24,12 +24,12 @@
 }
 
 @media screen and (max-width: 600px) {
-    .img{
+    /* .img{
         width: 100%;
         height: 300px;
-    }
+    } */
 
     .heading{
-        font-size: 30px;
+        font-size: 25px;
     }
 }

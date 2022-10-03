@@ -1,5 +1,5 @@
-import React from 'react'
-import {Box, Heading, Button, Text, Image, Flex, List, ListItem, ListIcon, Avatar} from '@chakra-ui/react'
+import React, {useState} from 'react'
+import {Box, Heading, Button, Text, Image, Flex, List, ListItem, ListIcon, Avatar, SimpleGrid} from '@chakra-ui/react'
 import {CheckCircleIcon, CheckIcon} from '@chakra-ui/icons'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import "swiper/css";
@@ -12,6 +12,10 @@ import third from './assets/3.jpeg'
 import fourth from './assets/4.jpeg'
 import fifth from './assets/5.jpeg'
 import sixth from './assets/6.jpeg'
+import img from './assets/9.jpg'
+import cashew from './assets/7.jpg'
+import beans from './assets/8.jpg'
+import next from './assets/cocoa.jfif'
 import './main.css'
 import tiger from './assets/tiger.png'
 import partner from './assets/partner.png'
@@ -21,21 +25,45 @@ import Zoom from 'react-reveal/Zoom'
 
 const Home = () => {
   const date = new Date().getFullYear();
+  const [show, setShow] = useState(false)
   return (
     <Box>
     
+    {/* carousel slider starts here */}
+      <Box>
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide><Image src={cashew} alt="" className='img' />  </SwiperSlide>
+          <SwiperSlide><Image src={beans} alt="" className='img' />  </SwiperSlide>
+          <SwiperSlide><Image src={img} alt="" className='img' />  </SwiperSlide>
+        </Swiper>
+      </Box>
+    {/* carousel slider ends here */}
+
     {/* About Us section starts here */}
       <Box as='section' mt='4' p='3'>
-        <Zoom>
-        <Box textAlign={'center'} mb='3'>
-            <Box textAlign={'center'} className='heading'>About Us</Box>
-            <Box className='line'></Box>
-        </Box>
-        </Zoom>
 
         <Flex justifyContent={'space-around'} mt='10' flexWrap={'wrap'}>
           <Fade left>
             <Box maxW={'550px'}>
+              <Zoom>
+                <Box textAlign={'center'} mb='7'>
+                  <Box textAlign={'center'} className='heading'>About Us</Box>
+                  <Box className='line'></Box>
+                </Box>
+              </Zoom>
               <Text mb='5' textAlign={'justify'} fontSize='14.5px'>
                   BBO Farm Ventures Ltd is an agribusiness company registered in
                   Nigeria for the purpose of producing and aggregating agricultural
@@ -49,29 +77,35 @@ const Home = () => {
                     products; Cocoa, Cashew, Beans/Cowpea, Soybeans, Maize, Sesame
                     etc.
                 </Text>
-                <Text mb='5' textAlign={'justify'} fontSize='14.5px'>
-                    At BBO, we develop grassroots relationships with farmers and other
-                    players who operate at the farm gate level to maintain price
-                    advantage and good product quality.
-                </Text>
-                <Text mb='5' textAlign={'justify'} fontSize='14.5px'>
-                    We also engage in primary processing of commodities which ensures
-                    quality control and mitigates against the risk inherent in dealing with
-                    agricultural produce. And this ultimately secures the investment in
-                    the business. Our locations and points of operation are also proximate
-                    to the final consumer/market thereby ensuring ease of business with
-                    our partners.
-                </Text>
-                <Text mb='5' textAlign={'justify'} fontSize='14.5px'>
-                    During its first year of operations, turnover was in excess of N500
-                    million and the company returned a profit.
-                </Text>
+                
             </Box>
           </Fade>
 
           <Fade right>
-            <Box>
-              <Image src={first} w={'500px'} h='400px' />
+            <Box maxW={'550px'}>
+              <Zoom>
+                <Box textAlign={'center'} mb='7'>
+                  <Box textAlign={'center'} className='heading'>What We Do</Box>
+                  <Box className='line'></Box>
+                </Box>
+              </Zoom>
+              <Text mb='5' textAlign={'justify'} fontSize='14.5px'>
+                At BBO, we develop grassroots relationships with farmers and other
+                players who operate at the farm gate level to maintain price
+                advantage and good product quality.
+              </Text>
+              <Text mb='5' textAlign={'justify'} fontSize='14.5px'>
+                We also engage in primary processing of commodities which ensures
+                quality control and mitigates against the risk inherent in dealing with
+                agricultural produce. And this ultimately secures the investment in
+                the business. Our locations and points of operation are also proximate
+                to the final consumer/market thereby ensuring ease of business with
+                our partners.
+              </Text>
+              <Text mb='5' textAlign={'justify'} fontSize='14.5px'>
+                During its first year of operations, turnover was in excess of N500
+                million and the company returned a profit.
+              </Text>
             </Box>
           </Fade>
         </Flex>
@@ -140,18 +174,20 @@ const Home = () => {
           </Box>
         </Zoom>
 
-          <Box mt='9' fontSize={'14.5px'} >
+          <Box mt='9' fontSize={'14.5px'}>
               <Flex justifyContent={'space-evenly'} alignItems='center' flexWrap={'wrap'}>
                   <Fade left>
-                  <Box border={'lightgray'} w='350px' p='4' borderRadius={'md'} mb='6' boxShadow={'xl'} dropShadow='lg' bg='white'>
-                    <Box textAlign={'center'} mb='5'>
-                      <Avatar src='' size={'xl'} mb='3' />
-                      <Heading size='md'>ODUNUGA BABATUNDE</Heading>
-                      <Heading size='sm'>C.E.O</Heading>
+                    <Box p='4'>
+                      <Box border={'lightgray'} maxW='350px' p='4' bg='gray.50' borderRadius={'md'} mb='6' boxShadow={'xl'} dropShadow='lg' >
+                        <Box textAlign={'center'} mb='5'>
+                          <Avatar src='' size={'xl'} mb='3' />
+                          <Heading size='md'>ODUNUGA BABATUNDE</Heading>
+                          <Heading size='sm'>C.E.O</Heading>
+                        </Box>
+                        <Text mb='2'>MBA - Business in Emerging Markets Concentration (University of Liverpool, United Kingdom)</Text>
+                        <Text>BSc - Economics (University of Lagos)</Text>
+                      </Box>
                     </Box>
-                    <Text mb='2'>MBA - Business in Emerging Markets Concentration (University of Liverpool, United Kingdom)</Text>
-                    <Text>BSc - Economics (University of Lagos)</Text>
-                  </Box>
                   </Fade >
 
                   <Slide right>
@@ -269,35 +305,6 @@ const Home = () => {
 
       </Box>
 
-
-      <Box mt='9'>
-        <Box textAlign={'center'} mb='7' mt='5'>
-          <Box textAlign={'center'} className='heading'>Our Men At Work</Box>
-          <Box className='line'></Box>
-        </Box>
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide><Image src={first} alt=""  className='img' />  </SwiperSlide>
-          <SwiperSlide><Image src={second} alt=""  className='img' />  </SwiperSlide>
-          <SwiperSlide><Image src={third} alt=""  className='img' />  </SwiperSlide>
-          <SwiperSlide><Image src={fourth} alt=""  className='img' />  </SwiperSlide>
-          <SwiperSlide><Image src={fifth} alt=""  className='img' />  </SwiperSlide>
-          <SwiperSlide><Image src={sixth} alt=""  className='img' />  </SwiperSlide>
-        </Swiper>
-      </Box>
-
       
       <Box as='section' mb='70px'>
         <Zoom>
@@ -312,7 +319,7 @@ const Home = () => {
           <Box fontSize='17px' maxW='700px' margin='auto' mb='5' textAlign={'center'}>Our partners are one of our gretatest assets in farm sponsor, as we work together in fostering food security and ending hunger in Africa.</Box>
           </Slide>
 
-          <Flex alignItems={'center'} justifyContent='center' gap='40px' mt='9'>
+          <Flex alignItems={'center'} justifyContent='center' gap='40px' mt='9' flexWrap={'wrap'}>
               <Slide right>
               <Box style={{border: '2px solid lightgrey'}} p='5'>
                 <Image src={tiger} w='200px' mb='5' />
@@ -330,6 +337,39 @@ const Home = () => {
         </Box>
       </Box>
 
+
+    <Box as='section'>
+        <Zoom>
+          <Box textAlign={'center'} mb='9' mt='5'>
+            <Box textAlign={'center'} className='heading'>Gallery</Box>
+            <Box className='line'></Box>
+          </Box>
+        </Zoom>
+
+        <Box mb='80px'>
+          <Flex justifyContent={'space-around'} flexWrap={'wrap'}  alignItems='center'>
+            <Box w='200px' mb='9'>
+              <Image src={first} />
+            </Box>
+            <Box w='200px' mb='9'>
+              <Image src={second} />
+            </Box>
+            <Box w='200px' mb='9'>
+              <Image src={third} />
+            </Box>
+            <Box w='200px' mb='9'>
+              <Image src={fourth} />
+            </Box>
+            <Box w='200px' mb='9'>
+              <Image src={fifth} />
+            </Box>
+            <Box w='200px' mb='9'>
+              <Image src={sixth} />
+            </Box>
+          </Flex>
+        </Box>
+    </Box>
+    
 
       <Box as='section' bg='blackAlpha.900' color='whiteAlpha.900'>
         
@@ -360,7 +400,7 @@ const Home = () => {
           </Slide>
           <Box textAlign={'center'} mb='5' mt='9'><Button color='black'><a href="mailto:bbofarmventures@gmail.com?subject=subject text">Email Us</a></Button></Box>
           <hr />
-          <Text mt='4' textAlign={'center'}>&copy; {date} BBO Farms Limited - All rights reserved</Text>
+          <Text mt='4' textAlign={'center'}>&copy; {date} BBO Farms Ventures Limited - All rights reserved</Text>
         </Box>
       </Box>
 

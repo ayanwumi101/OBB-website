@@ -64,7 +64,7 @@ export default function Navbar() {
                     </HStack>
                     <Flex alignItems={'center'}>
                             <Image src={logo} w='70px' />
-                            <Heading size='md'>BBO Farms </Heading>
+                            <Heading size='md'>BBO Farms Ventures</Heading>
                         
                     </Flex>
                 </Flex>
