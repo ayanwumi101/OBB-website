@@ -17,7 +17,7 @@ import './main.css'
 const Home = () => {
   return (
     <Box>
-      <Box>
+      {/* <Box>
 
         <Swiper
           spaceBetween={30}
@@ -40,12 +40,12 @@ const Home = () => {
           <SwiperSlide><Image src={fifth} alt=""  className='img' />  </SwiperSlide>
           <SwiperSlide><Image src={sixth} alt=""  className='img' />  </SwiperSlide>
         </Swiper>
-      </Box>
+      </Box> */}
 
 
       <Box as='section' mt='4' p='3'>
         <Box textAlign={'center'} mb='3'>
-            <Box textAlign={'center'} fontSize='40px'>About Us</Box>
+            <Box textAlign={'center'} className='heading'>About Us</Box>
             <Box className='line'></Box>
         </Box>
 
@@ -141,14 +141,14 @@ const Home = () => {
 
       <Box as='section' mt='7'>
           <Box textAlign={'center'} mb='3'>
-            <Box textAlign={'center'} fontSize='40px'>C.E.O's Statement</Box>
+          <Box textAlign={'center'} className='heading'>C.E.O's Statement</Box>
             <Box className='line'></Box>
           </Box>
 
-          <Box mt='9' fontSize={'14.5px'}>
+          <Box mt='9' fontSize={'14.5px'} >
               <Flex justifyContent={'space-around'} alignItems='center' flexWrap={'wrap'}>
 
-                  <Box border={'lightgray'} w='300px' p='4' borderRadius={'md'} mb='6'>
+                  <Box border={'lightgray'} w='300px' p='4' borderRadius={'md'} mb='6' boxShadow={'xl'} dropShadow='lg' bg='white'>
                     <Box textAlign={'center'} mb='5'>
                       <Avatar src='' size={'xl'} mb='3' />
                       <Heading size='md'>ODUNUGA BABATUNDE</Heading>
@@ -158,7 +158,7 @@ const Home = () => {
                     <Text>BSc - Economics (University of Lagos)</Text>
                   </Box>
 
-                  <Box maxW='500px' textAlign={'justify'}>
+                  <Box maxW='500px' textAlign={'justify'} p='5'>
                     <Text mb='5'>
                         What I cherish most about
                         BBO Farm Ventures is the wealth
@@ -177,7 +177,7 @@ const Home = () => {
 
       <Box as='section' mt='5'>
           <Box textAlign={'center'} mb='7'>
-            <Box textAlign={'center'} fontSize='40px'>Our Team</Box>
+          <Box textAlign={'center'} className='heading'>Our Team</Box>
             <Box className='line'></Box>
           </Box>
 
@@ -207,16 +207,16 @@ const Home = () => {
           </List>
 
 
-          <Box pt='5' pb='5' color='black' bg='gray.200' textAlign={'justify'} mt='9' fontSize={'14.5px'}>
+          <Box pt='5' pb='5' color='blackAlpha.800' bg='gray.200' textAlign={'justify'} mt='9' fontSize={'14.5px'}>
 
           <Box textAlign={'center'} mb='7'>
-            <Box textAlign={'center'} fontSize='40px'>Management Team</Box>
+            <Box textAlign={'center'} className='heading'>Management Team</Box>
             <Box className='line' bg=''></Box>
           </Box>
 
 
             <Flex justifyContent={'space-around'} flexWrap='wrap'>
-              <Box border={'lightgray'} w='300px' p='3' mb='5' borderRadius={'md'}>
+              <Box boxShadow={'lg'} dropShadow='lg' bg='white' w='300px' p='3' mb='5' borderRadius={'md'} >
                 <Box textAlign={'center'} mb='5'>
                   <Avatar src='' size={'lg'} mb='3' />
                   <Heading size='sm'>CEO - ODUNUGA BABATUNDE</Heading>
@@ -232,7 +232,7 @@ const Home = () => {
                 
               </Box>
 
-               <Box border={'lightgray'} w='300px' p='3' mb='5' borderRadius={'md'}>
+               <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='white' w='300px' p='3' mb='5' borderRadius={'md'}>
                     <Box textAlign={'center'} mb='5'>
                       <Avatar src='' size={'lg'} mb='3' />
                       <Heading size='sm'>Logistics Manager - Ikechukwu Samson Ibenezim</Heading>
@@ -247,7 +247,7 @@ const Home = () => {
                     </Text>
                 </Box>
 
-                <Box border={'lightgray'} w='300px' mb='5' p='3' borderRadius={'md'}>
+                <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='white' w='300px' mb='5' p='3' borderRadius={'md'}>
                     <Box textAlign={'center'} mb='5'>
                       <Avatar src='' size={'lg'} mb='3' />
                       <Heading size='sm'>Accountant Ayobami Deborah Obiwale</Heading>
@@ -261,7 +261,7 @@ const Home = () => {
                 </Box>
 
 
-                <Box border={'lightgray'} w='300px' mb='5' p='3' borderRadius={'md'}>
+                <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='white' w='300px' mb='5' p='3' borderRadius={'md'}>
                     <Box textAlign={'center'} mb='5'>
                       <Avatar src='' size={'lg'} mb='3' />
                       <Heading size='sm'>Operations Manager Hakeem Oriyomi Sulaimon;</Heading>
@@ -282,14 +282,14 @@ const Home = () => {
       </Box>
 
       
-      <Box as='section' mb='9'>
+      <Box as='section' mb='70px'>
         <Box textAlign={'center'} mb='7' mt='5'>
-          <Box textAlign={'center'} fontSize='40px'>Our Partners</Box>
+          <Box textAlign={'center'} className='heading'>Our Partners</Box>
           <Box className='line'></Box>
         </Box>
-        <Box mb='5' maxW='1000px' margin={'auto'}>
-          <Box fontSize='20px' mb='5' textAlign={'center'}>Our growing network of strategic partners include</Box>
-          <List spacing={3}>
+        <Box mb='5' maxW='1000px' margin={'auto'} p='5' textAlign={'center'}>
+          <Box fontSize='18px' mb='5' textAlign={'center'}>Our growing network of strategic partners include</Box>
+          <List spacing={4}>
             <ListItem>
               <ListIcon as={CheckCircleIcon} color={'green.500'} />
               Shankdeep Limited, Lagos, Nigeria
@@ -315,7 +315,7 @@ const Home = () => {
       <Box as='section' bg='blackAlpha.900' color='whiteAlpha.900'>
 
         <Box textAlign={'center'} mb='7' mt='5'>
-          <Box textAlign={'center'} fontSize='40px'>Contact Us</Box>
+          <Box textAlign={'center'} className='heading'>Contact Us</Box>
           <Box className='line' bg='white'></Box>
         </Box>
 
