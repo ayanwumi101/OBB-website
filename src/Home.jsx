@@ -13,43 +13,28 @@ import fourth from './assets/4.jpeg'
 import fifth from './assets/5.jpeg'
 import sixth from './assets/6.jpeg'
 import './main.css'
+import tiger from './assets/tiger.png'
+import partner from './assets/partner.png'
+import Fade from 'react-reveal/Fade'
+import Slide from 'react-reveal/Slide'
+import Zoom from 'react-reveal/Zoom'
 
 const Home = () => {
+  const date = new Date().getFullYear();
   return (
     <Box>
-      {/* <Box>
-
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide><Image src={first} alt=""  className='img' />  </SwiperSlide>
-          <SwiperSlide><Image src={second} alt=""  className='img' />  </SwiperSlide>
-          <SwiperSlide><Image src={third} alt=""  className='img' />  </SwiperSlide>
-          <SwiperSlide><Image src={fourth} alt=""  className='img' />  </SwiperSlide>
-          <SwiperSlide><Image src={fifth} alt=""  className='img' />  </SwiperSlide>
-          <SwiperSlide><Image src={sixth} alt=""  className='img' />  </SwiperSlide>
-        </Swiper>
-      </Box> */}
-
-
+    
+    {/* About Us section starts here */}
       <Box as='section' mt='4' p='3'>
+        <Zoom>
         <Box textAlign={'center'} mb='3'>
             <Box textAlign={'center'} className='heading'>About Us</Box>
             <Box className='line'></Box>
         </Box>
+        </Zoom>
 
         <Flex justifyContent={'space-around'} mt='10' flexWrap={'wrap'}>
+          <Fade left>
             <Box maxW={'550px'}>
               <Text mb='5' textAlign={'justify'} fontSize='14.5px'>
                   BBO Farm Ventures Ltd is an agribusiness company registered in
@@ -82,14 +67,20 @@ const Home = () => {
                     million and the company returned a profit.
                 </Text>
             </Box>
+          </Fade>
 
+          <Fade right>
             <Box>
               <Image src={first} w={'500px'} h='400px' />
             </Box>
+          </Fade>
         </Flex>
       </Box>
+      {/* The about sections ends here */}
 
 
+      {/* Te vision and mission section starts here */}
+      <Slide right>
       <Box p='9' bg={'gray.200'} color={'grey.200'} w='100%' margin='auto'>
         <Flex flexWrap={'wrap'} justifyContent='space-around' >
           <Box textAlign={'justify'} mb='5' w='300px'>
@@ -137,18 +128,22 @@ const Home = () => {
           </Box>
         </Flex>
       </Box>
+      </Slide>
+      {/* The vision and mission section ends here */}
 
 
-      <Box as='section' mt='7'>
-          <Box textAlign={'center'} mb='3'>
-          <Box textAlign={'center'} className='heading'>C.E.O's Statement</Box>
+      <Box as='section' mt='7' mb='9'>
+        <Zoom>
+          <Box textAlign={'center'} mb='9'>
+            <Box textAlign={'center'} className='heading'>C.E.O's Statement</Box>
             <Box className='line'></Box>
           </Box>
+        </Zoom>
 
           <Box mt='9' fontSize={'14.5px'} >
-              <Flex justifyContent={'space-around'} alignItems='center' flexWrap={'wrap'}>
-
-                  <Box border={'lightgray'} w='300px' p='4' borderRadius={'md'} mb='6' boxShadow={'xl'} dropShadow='lg' bg='white'>
+              <Flex justifyContent={'space-evenly'} alignItems='center' flexWrap={'wrap'}>
+                  <Fade left>
+                  <Box border={'lightgray'} w='350px' p='4' borderRadius={'md'} mb='6' boxShadow={'xl'} dropShadow='lg' bg='white'>
                     <Box textAlign={'center'} mb='5'>
                       <Avatar src='' size={'xl'} mb='3' />
                       <Heading size='md'>ODUNUGA BABATUNDE</Heading>
@@ -157,7 +152,9 @@ const Home = () => {
                     <Text mb='2'>MBA - Business in Emerging Markets Concentration (University of Liverpool, United Kingdom)</Text>
                     <Text>BSc - Economics (University of Lagos)</Text>
                   </Box>
+                  </Fade >
 
+                  <Slide right>
                   <Box maxW='500px' textAlign={'justify'} p='5'>
                     <Text mb='5'>
                         What I cherish most about
@@ -170,17 +167,21 @@ const Home = () => {
                         businesses are being carried out.
                     </Text>
                   </Box>
+                  </Slide>
               </Flex>
           </Box>
       </Box>
 
 
       <Box as='section' mt='5'>
+        <Slide right>
           <Box textAlign={'center'} mb='7'>
-          <Box textAlign={'center'} className='heading'>Our Team</Box>
+            <Box textAlign={'center'} className='heading'>Our Team</Box>
             <Box className='line'></Box>
           </Box>
+          </Slide>
 
+        <Fade left>
           <List spacing={3} mt='5' maxW={'1100px'} margin='auto' p='5' textAlign={'justify'}>
             <ListItem>
               <ListIcon as={CheckCircleIcon} color={'green.500'} />
@@ -205,121 +206,142 @@ const Home = () => {
               projects
             </ListItem>
           </List>
+        </Fade>
 
 
           <Box pt='5' pb='5' color='blackAlpha.800' bg='gray.200' textAlign={'justify'} mt='9' fontSize={'14.5px'}>
 
-          <Box textAlign={'center'} mb='7'>
+        <Zoom>
+          <Box textAlign={'center'} mb='60px'>
             <Box textAlign={'center'} className='heading'>Management Team</Box>
             <Box className='line' bg=''></Box>
           </Box>
+        </Zoom>
 
 
             <Flex justifyContent={'space-around'} flexWrap='wrap'>
+            {/* Card for each team member goes here */}
+              <Zoom>
               <Box boxShadow={'lg'} dropShadow='lg' bg='white' w='300px' p='3' mb='5' borderRadius={'md'} >
                 <Box textAlign={'center'} mb='5'>
                   <Avatar src='' size={'lg'} mb='3' />
-                  <Heading size='sm'>CEO - ODUNUGA BABATUNDE</Heading>
+                  <Heading size='sm' mb='3'>ODUNUGA BABATUNDE (MBA)</Heading>
+                  <Text>C.E.O.</Text>
                 </Box>
-                <Text>
-                    Babatunde is a graduate of the University of
-                    Liverpool, United Kingdom with an MBA (Specialization in Business in
-                    Emerging Markets). He holds a BSC in Economics from the University of
-                    Lagos and has worked with a commodities trading company as a Territory
-                    Manager with oversight over more than ten states of the federation.
-                    Babatunde overseas the affairs of the company.
-                </Text>
-                
               </Box>
-
+              </Zoom>
+              
+              {/* Card for each team member goes here */}
+              <Zoom>
                <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='white' w='300px' p='3' mb='5' borderRadius={'md'}>
                     <Box textAlign={'center'} mb='5'>
                       <Avatar src='' size={'lg'} mb='3' />
-                      <Heading size='sm'>Logistics Manager - Ikechukwu Samson Ibenezim</Heading>
+                      <Heading size='sm' mb='3'>Chukwudi Akpa (BSc. - Geology)</Heading>
+                      <Text>Logistics Manager</Text>
                     </Box>
-                    <Text>
-                        Ikechukwu holds a BSc
-                        and MSc (Statistics) from Imo State University and University of Port
-                        Harcourt respectively. Prior to BBO, Ikechukwu worked with Imo Concord
-                        Hotel as an outlet Supervisor in the Food and Beverage Department, as a
-                        Mobil Service Station Manager and Linnef Nigeria Limited as Logistics
-                        Manager.
-                    </Text>
                 </Box>
+              </Zoom>
 
+                {/* Card for each team member goes here */}
+                <Zoom>
                 <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='white' w='300px' mb='5' p='3' borderRadius={'md'}>
                     <Box textAlign={'center'} mb='5'>
                       <Avatar src='' size={'lg'} mb='3' />
-                      <Heading size='sm'>Accountant Ayobami Deborah Obiwale</Heading>
+                      <Heading size='sm' mb='3'>Ayobami Deborah Obiwale (BSc. - Banking & Finance)</Heading>
+                      <Text>Accountant.</Text>
                     </Box>
-                    <Text>
-                        Ayobami has been a vibrant part
-                        of the Team since 2020. She holds a Bsc in Banking and Finance from Bowen
-                        University and is undertaking her MSc in Banking and Finance at the
-                        University of Ibadan. She is also a prospecting Fellow of the ICAN.
-                    </Text>
                 </Box>
+                </Zoom>
 
-
+            {/* Card for each team member goes here */}
+              <Zoom>
                 <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='white' w='300px' mb='5' p='3' borderRadius={'md'}>
                     <Box textAlign={'center'} mb='5'>
                       <Avatar src='' size={'lg'} mb='3' />
-                      <Heading size='sm'>Operations Manager Hakeem Oriyomi Sulaimon;</Heading>
+                      <Heading size='sm' mb='3'>Hakeem Oriyomi Sulaimon (BSc. - Geography)</Heading>
+                      <Text>Operations Manager</Text>
                     </Box>
-                    <Text>
-                        Bsc Geography and
-                        Regional Planning, Msc Geography both in Olabisi Onabanjo University.
-                        Hakeem is the Operations Manager. Hakeem worked with Bio Minerals and
-                        Petro Chemicals Limited as Admin Supervisor before he joined BBO Farms as
-                        Operations Manager
-                    </Text>
                 </Box>
+              </Zoom>
+
               </Flex>
           </Box>
 
+      </Box>
 
 
+      <Box mt='9'>
+        <Box textAlign={'center'} mb='7' mt='5'>
+          <Box textAlign={'center'} className='heading'>Our Men At Work</Box>
+          <Box className='line'></Box>
+        </Box>
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide><Image src={first} alt=""  className='img' />  </SwiperSlide>
+          <SwiperSlide><Image src={second} alt=""  className='img' />  </SwiperSlide>
+          <SwiperSlide><Image src={third} alt=""  className='img' />  </SwiperSlide>
+          <SwiperSlide><Image src={fourth} alt=""  className='img' />  </SwiperSlide>
+          <SwiperSlide><Image src={fifth} alt=""  className='img' />  </SwiperSlide>
+          <SwiperSlide><Image src={sixth} alt=""  className='img' />  </SwiperSlide>
+        </Swiper>
       </Box>
 
       
       <Box as='section' mb='70px'>
+        <Zoom>
         <Box textAlign={'center'} mb='7' mt='5'>
           <Box textAlign={'center'} className='heading'>Our Partners</Box>
           <Box className='line'></Box>
         </Box>
+        </Zoom>
+
         <Box mb='5' maxW='1000px' margin={'auto'} p='5' textAlign={'center'}>
-          <Box fontSize='18px' mb='5' textAlign={'center'}>Our growing network of strategic partners include</Box>
-          <List spacing={4}>
-            <ListItem>
-              <ListIcon as={CheckCircleIcon} color={'green.500'} />
-              Shankdeep Limited, Lagos, Nigeria
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckCircleIcon} color={'green.500'} />
-              Tiger Foods Limited, Onitsha, Nigeria
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckCircleIcon} color={'green.500'} />
-              Earth Bounties Limited, Dubai, U.A.E
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckCircleIcon} color={'green.500'} />
-              Other organizations we are engaging towards developing trade relations with
-              include ECOM Trading and Barry Callebaut
-            </ListItem>
-          </List>
+          <Slide left>
+          <Box fontSize='17px' maxW='700px' margin='auto' mb='5' textAlign={'center'}>Our partners are one of our gretatest assets in farm sponsor, as we work together in fostering food security and ending hunger in Africa.</Box>
+          </Slide>
+
+          <Flex alignItems={'center'} justifyContent='center' gap='40px' mt='9'>
+              <Slide right>
+              <Box style={{border: '2px solid lightgrey'}} p='5'>
+                <Image src={tiger} w='200px' mb='5' />
+                <Text>Tiger Foods Limited</Text>
+              </Box>
+              </Slide>
+
+            <Slide right>
+            <Box style={{ border: '2px solid lightgrey' }}  h='150px'>
+              <Image src={partner} w='300px' />
+            </Box>
+            </Slide>
+
+          </Flex>
         </Box>
       </Box>
 
 
       <Box as='section' bg='blackAlpha.900' color='whiteAlpha.900'>
-
+        
+        <Zoom>
         <Box textAlign={'center'} mb='7' mt='5'>
           <Box textAlign={'center'} className='heading'>Contact Us</Box>
           <Box className='line' bg='white'></Box>
         </Box>
+        </Zoom>
 
         <Box p='5' fontSize={'14px'}>
+          <Slide left>
           <Flex justifyContent={'space-around'} flexWrap='wrap'>
             <Box w='350px' textAlign={'justify'} mb='9'>
                 <Box textAlign={'center'} fontSize='20px' mb='4'>Office Addresses</Box>
@@ -335,7 +357,10 @@ const Home = () => {
                 <Text>Mokwa: 830, Mokwa central mosque grain shade, Mokwa Niger state.</Text>
               </Box>
           </Flex>
+          </Slide>
           <Box textAlign={'center'} mb='5' mt='9'><Button color='black'><a href="mailto:bbofarmventures@gmail.com?subject=subject text">Email Us</a></Button></Box>
+          <hr />
+          <Text mt='4' textAlign={'center'}>&copy; {date} BBO Farms Limited - All rights reserved</Text>
         </Box>
       </Box>
 
