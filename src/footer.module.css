@@ -1,6 +1,5 @@
 footer {
     max-width: 100%;
-    background-color: lightgray;
     padding: 25px 20px;
     display: flex;
     align-items: flex-start;
@@ -8,6 +7,7 @@ footer {
     justify-content: space-around;
     font-size: 13.5px;
     flex-wrap: wrap;
+    color: white;
 }
 
 ul{
@@ -31,7 +31,7 @@ ul{
 }
 
 .footer_text p {
-    color: black;
+    color: rgba(0,0,0,0.9);
 }
 
 .columns {
@@ -44,12 +44,13 @@ ul{
 }
 
 .link_list h4 {
+    font-size: 20px;
     color: black;
     margin-bottom: 25px;
 }
 
 .link_list li {
-    color: black;
+    color: rgba(0, 0, 0, 0.9);
     margin-bottom: 15px;
     font-size: 13.3px;
 }

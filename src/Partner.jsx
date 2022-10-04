@@ -19,7 +19,7 @@ const Partner = () => {
 
           <Box mb='5' maxW='1000px' margin={'auto'} p='5' textAlign={'center'}>
               <Slide left>
-                  <Box fontSize='17px' maxW='700px' margin='auto' mb='5' textAlign={'center'}>Our partners are one of our major assets ,and we maintain a balanced relationship in bridging the gaps in the industry and ending hunger in Africa</Box>
+                  <Box fontSize='17px' maxW='700px' margin='auto' mb='5' textAlign={'center'}>Our partners are one of our major assets, and we maintain a balanced victual interest with all stakeholders in the value chain (<em>Farmers/Traders/Retailers/Exporters/Consumers</em>), providing all with stable incomes and returns, while guarantying quality and quantity.</Box>
               </Slide>
 
               <Flex alignItems={'center'} justifyContent='center' gap='40px' mt='9' flexWrap={'wrap'}>

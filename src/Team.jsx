@@ -8,6 +8,7 @@ import hakeem from './assets/hakeem.jfif'
 import ceo from './assets/ceo.jpeg'
 import girl from './assets/team.jfif'
 import boy from './assets/team3.jfif'
+import avatar from './assets/avatar.jpg'
 
 const Team = () => {
   return (
@@ -23,8 +24,8 @@ const Team = () => {
               <List spacing={3} mt='5' maxW={'1100px'} margin='auto' p='5' textAlign={'justify'}>
                   <ListItem>
                       <ListIcon as={CheckCircleIcon} color={'green.500'} />
-                      Our team is our most valuable asset. It consists of dedicated and goal
-                      oriented field and professional operatives.
+                      Our team is our most valuable asset, It consists of dedicated, professional and goal
+                      oriented members.
                   </ListItem>
                   <ListItem>
                       <ListIcon as={CheckCircleIcon} color={'green.500'} />
@@ -34,7 +35,7 @@ const Team = () => {
                   <ListItem>
                       <ListIcon as={CheckCircleIcon} color={'green.500'} />
                       We care about the relationships we build with our clients and members
-                      of the community
+                      of the communities.
                   </ListItem>
                   <ListItem>
                       <ListIcon as={CheckCircleIcon} color={'green.500'} />
@@ -47,12 +48,12 @@ const Team = () => {
           </Fade>
 
 
-          <Box pt='5' pb='5' color='blackAlpha.800' bg='orange.200' textAlign={'justify'} mt='9' mb='9' fontSize={'14.5px'}>
+          <Box pt='5' pb='5' color='blackAlpha.800' textAlign={'justify'} mt='9' mb='9' fontSize={'14.5px'}>
 
               <Zoom>
-                  <Box textAlign={'center'} color='white' mb='60px'>
+                  <Box textAlign={'center'} color='whatsapp.700' mb='60px'>
                       <Box textAlign={'center'} className='heading'>Management Team</Box>
-                      <Box className='line' bg='white'></Box>
+                      <Box className='line' bg='black'></Box>
                   </Box>
               </Zoom>
 
@@ -60,61 +61,68 @@ const Team = () => {
               <Flex justifyContent={'space-around'} flexWrap='wrap' alignItems={'center'}>
                   {/* Card for each team member goes here */}
                   <Zoom left>
-                      <Box p='4'>
-                          <Box border={'lightgray'} maxW='350px' p='4' bg='gray.50' borderRadius={'md'} mb='6' boxShadow={'xl'} dropShadow='lg' >
+                      <Box p='3'>
+                          <Box border={'lightgray'} maxW='350px' p='4' bg='gray.200' borderRadius={'md'} mb='6' boxShadow={'xl'} dropShadow='lg' >
                               <Box textAlign={'center'} mb='5'>
                                   <Avatar src={ceo} size={'xl'} mb='3' />
-                                  <Heading size='md'>ODUNUGA BABATUNDE</Heading>
-                                  <Heading size='sm'>C.E.O</Heading>
+                                  <Heading size='sm' mb='3'>ODUNUGA BABATUNDE</Heading>
+                                  <Text mb='2'>C.E.O</Text>
+                                  <Text>BSc, MBA - Business in Emerging Market</Text>
                               </Box>
-                              <Text mb='2'>MBA - Business in Emerging Markets Concentration (University of Liverpool, United Kingdom)</Text>
-                              <Text>BSc - Economics (University of Lagos)</Text>
                           </Box>
                       </Box>
                   </Zoom >
 
-                  {/* Card for each team member goes here */}
-                  <Zoom>
-                      <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='white' w='300px' p='3' mb='5' borderRadius={'md'}>
-                          <Box textAlign={'center'} mb='5'>
-                              <Avatar src='' size={'lg'} mb='3' />
-                              <Heading size='sm' mb='3'>Chukwudi Akpa (BSc. - Geology)</Heading>
-                              <Text>Logistics Manager</Text>
-                          </Box>
-                      </Box>
-                  </Zoom>
 
-                  {/* Card for each team member goes here */}
                   <Zoom>
-                      <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='white' w='300px' mb='5' p='3' borderRadius={'md'}>
-                          <Box textAlign={'center'} mb='5'>
-                              <Avatar src={girl} size={'xl'} mb='3' />
-                              <Heading size='sm' mb='3'>Ayobami Deborah Obiwale (BSc. - Banking & Finance)</Heading>
-                              <Text>Accountant.</Text>
-                          </Box>
-                      </Box>
-                  </Zoom>
-
-                  {/* Card for each team member goes here */}
-                  <Zoom>
-                      <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='white' w='300px' mb='5' p='3' borderRadius={'md'}>
+                      <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='gray.200' w='300px' mb='5' p='3' borderRadius={'md'}>
                           <Box textAlign={'center'} mb='5'>
                               <Avatar src={hakeem} size={'xl'} mb='3' />
-                              <Heading size='sm' mb='3'>Hakeem Oriyomi Sulaimon (MSc. - Geography)</Heading>
-                              <Text>Operations Manager</Text>
+                              <Heading size='sm' mb='3'>HAKEEM ORIYOMI SULAIMON</Heading>
+                              <Text mb='2'>Operations Manager (1)</Text>
+                              <Text>MSc. BSc. - Geography </Text>
                           </Box>
                       </Box>
                   </Zoom>
 
                   <Zoom>
-                      <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='white' w='300px' mb='5' p='3' borderRadius={'md'}>
+                      <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='gray.200' w='300px' mb='5' p='3' borderRadius={'md'}>
                           <Box textAlign={'center'} mb='5'>
                               <Avatar src={boy} size={'xl'} mb='3' />
-                              <Heading size='sm' mb='3'>Awere Olasubomi Olayemi - (Bsc. Business Management)</Heading>
-                              <Text>Operations Manager (2)</Text>
+                              <Heading size='sm' mb='3'>AWERE OLASUBOMI OLAYEMI</Heading>
+                              <Text mb='2'>Operations Manager (2)</Text>
+                              <Text>MSW. Bsc. - Business Management</Text>
                           </Box>
                       </Box>
                   </Zoom>
+
+                  {/* Card for each team member goes here */}
+
+                  {/* Card for each team member goes here */}
+                  <Zoom>
+                      <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='gray.200' w='300px' mb='5' p='3' borderRadius={'md'}>
+                          <Box textAlign={'center'} mb='5'>
+                              <Avatar src={girl} size={'xl'} mb='3' />
+                              <Heading size='sm' mb='2'>AYOBAMI DEBORAH OBIWALE</Heading>
+                              <Text mb='2'>Accountant.</Text>
+                              <Text>BSc - Banking & Finance</Text>
+                          </Box>
+                      </Box>
+                  </Zoom>
+
+
+                  <Zoom>
+                      <Box border={'lightgray'} boxShadow={'lg'} dropShadow='lg' bg='gray.200' w='300px' p='3' mb='5' borderRadius={'md'}>
+                          <Box textAlign={'center'} mb='5'>
+                              <Avatar src={avatar} size={'xl'} mb='3' />
+                              <Heading size='sm' mb='3'>CUKWUDI AKPA</Heading>
+                              <Text mb='2'>Logistics Manager</Text>
+                              <Text>BSc - Geology</Text>
+                          </Box>
+                      </Box>
+                  </Zoom>
+
+                  {/* Card for each team member goes here */}
 
               </Flex>
           </Box>

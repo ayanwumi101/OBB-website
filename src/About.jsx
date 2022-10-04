@@ -29,7 +29,7 @@ const About = () => {
                       <Text mb='5' textAlign={'justify'} fontSize='14.5px' p='5'>
                           Established and fully operational since 2020, the company has
                           garnered competences along the entire value chains of the following
-                          products; Cocoa, Cashew, Beans/Cowpea, Soybeans, Maize, Sesame
+                          products; Cocoa, Cashew, Beans/Cowpea, Soybeans, Maize, Sesame, Palm Kernel,
                           etc.
                       </Text>
 
@@ -69,11 +69,11 @@ const About = () => {
               <Box p='9' bg={'whatsapp.100'} color={'grey.200'} w='100%' margin='auto'>
                   <Flex flexWrap={'wrap'} justifyContent='space-around' >
                       <Box textAlign={'justify'} mb='5' w='300px'>
-                          <Box textAlign={'center'} fontSize='20px' mb='3'>Our Vission</Box>
-                          <Text fontSize='14.5px'>
-                              To become a leading player in the
-                              Agriculture industry with emphasis on
-                              the aggregation and processing
+                          <Box textAlign={'center'} fontSize='20px' mb='3'>Our Vision</Box>
+                         
+
+                          <Text>
+                              Our vision is to be the foremost and most reputable mid-stream commodity trading company which specializes in aggregating commodities.  We aim to always deliver good quantity and quality products at competitive prices which will in turn guarantee maximum value for all stakeholders.
                           </Text>
                       </Box>
 
@@ -127,24 +127,21 @@ const About = () => {
 
               <Box mt='9' fontSize={'14.5px'}>
                   <Flex justifyContent={'space-evenly'} alignItems='center' flexWrap={'wrap'}>
-                    <Slide left>
-                        <Box w='300px' p='3'>
-                              <Image src={ceo} borderRadius={'lg'} />
-                        </Box>
-                    </Slide>
 
                       <Slide right>
                           <Box maxW='500px' textAlign={'justify'} p='5'>
-                              <Text mb='5'>
-                                  What I cherish most about
-                                  BBO Farm Ventures is the wealth
-                                  that our projects bring to the community and to our clients.
+                              <Text mb='2'>"
+                                  <em style={{color: 'green'}}> The best way to predict the future is to create it,  </em>
+                                  is a quote that gives expression to the BBO brand story.  
+                                  <em>What I cherish most about
+                                      BBO Farm Ventures is the wealth
+                                      that our projects brings to the communities and to our partners.</em>
+                                  <em>From the first day of operation, we feel connected to the
+                                      communities, and to the environment in which our
+                                      businesses are being carried out. "</em>
                               </Text>
-                              <Text>
-                                  From the first day of operation, we feel connected to the
-                                  community, connected to the environment in which our
-                                  businesses are being carried out.
-                              </Text>
+                             
+                              <Text fontWeight={'bold'} textAlign='right'> - Babatunde Odunuga</Text>
                           </Box>
                       </Slide>
                   </Flex>

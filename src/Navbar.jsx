@@ -57,31 +57,25 @@ export default function Navbar() {
                             as={'nav'}
                             spacing={4}
                             display={{ base: 'none', md: 'flex' }}>
-                                <Link to='/'>
-                                    Home
-                                </Link>
+                            <Link to='/' className='active'>Home</Link>
+                            <Link to='/about' className='active'>Our Company</Link>
+                            <Link to='/teams' className='active'>Team</Link>
 
-                                <Link to='/about'>
-                                    Our Company
-                                </Link>
+                            <Link to='/partners' className='active'>
+                                Partners
+                            </Link>
 
-                                <Link to='/products'>Products</Link>
+                            <Link to='/products' className='active'>
+                                Products
+                            </Link>
 
-                                <Link to='/teams'>
-                                    Teams
-                                </Link>
+                            <Link to='/gallery' className='active'>
+                                Gallery
+                            </Link>
 
-                                <Link to='/gallery'>
-                                    Gallery
-                                </Link>
-
-                                <Link to='/partners'>
-                                    Partners
-                                </Link>
-
-                                <Link to='/contact'>
-                                    Contact us
-                                </Link>
+                            <Link to='/contact' className='active'>
+                                Contact Us
+                            </Link>
                         </HStack>
                     </HStack>
                     <Link to='/'>
@@ -99,24 +93,24 @@ export default function Navbar() {
                         
                             
                             <Stack as={'nav'} spacing={4}>
-                                <Link to='/'>Home</Link>
-                                <Link to='/about'>Our Company</Link>
-                                <Link to='/products'>Products</Link>
+                            <Link to='/' className='active'>Home</Link>
+                            <Link to='/about' className='active'>Our Company</Link>
+                            <Link to='/teams' className='active'>Team</Link>
 
-                                <Link to='/teams'>
-                                    Teams
-                                </Link>
-
-                                <Link to='/gallery'>
-                                    Gallery
-                                </Link>
-
-                                <Link to='/partners'>
+                            <Link to='/partners' className='active'>
                                     Partners
                                 </Link>
 
-                                <Link to='/contact'>
-                                    Contact us
+                            <Link to='/products' className='active'>
+                                    Products
+                                </Link>
+
+                            <Link to='/gallery' className='active'>
+                                    Gallery
+                                </Link>
+
+                            <Link to='/contact' className='active'>
+                                    Contact Us
                                 </Link>
                             </Stack>
 

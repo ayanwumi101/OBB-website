@@ -12,8 +12,8 @@ const Contact = () => {
 
           <Zoom>
               <Box textAlign={'center'} mb='7' mt='5'>
-                  <Box textAlign={'center'} className='heading'>Contact Us</Box>
-                  <Box className='line' bg='white'></Box>
+                  <Box textAlign={'center'} className='heading' color='whatsapp.700'>Contact Us</Box>
+                  <Box className='line' bg='black'></Box>
               </Box>
           </Zoom>
 
@@ -44,13 +44,9 @@ const Contact = () => {
                               </ListItem>
                               <ListItem>
                                   <ListIcon as={EmailIcon} />
-                                  bbofarmventures@gmail.com
-                              </ListItem>
-                              <ListItem>
-                                  <ListIcon as={EmailIcon} />
                                   info@bbofarmventures.com
                               </ListItem>
-                              <Button color='black' size='sm' mb='5' mt='9'><a href="mailto:bbofarmventures@gmail.com?subject=subject text">Email Us</a></Button>
+                              <Button size='sm' mb='5' mt='9' colorScheme={'teal'} color='white'><a href="mailto:info@bbofarmventures.com?subject=subject text">Email Us</a></Button>
                           </List>
                       </Box>
                   </Flex>

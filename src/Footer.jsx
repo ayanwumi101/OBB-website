@@ -9,7 +9,7 @@ import {EmailIcon, PhoneIcon} from '@chakra-ui/icons'
 const Footer = () => {
   const date = new Date().getFullYear();
   return (
-    <footer>
+    <Box as='footer' className='footer' bg='gray.200'>
       <Fade left>
         <div className={styles.footer_text}>
           <div className="heading">
@@ -17,7 +17,10 @@ const Footer = () => {
           </div>
 
           <div>
-            <p>At BBO Farm, All our primary processing activities are done in-house using state of the art quality equipment’s and processes with our employees driving these procedures directly.</p>
+            <p>At BBO Farm Vent, all our primary processing activities are done in-house using state of the art quality equipments and processes with our employees driving these procedures directly.</p>
+          </div>
+          <div style={{color: 'rgba(0, 0, 0, 0.8)'}}>
+            <em>“Think mid-stream commodities aggregation, think BBO Farms Venture”.</em>
           </div>
         </div>
       </Fade>
@@ -30,10 +33,10 @@ const Footer = () => {
             <div className={styles.link_list}>
               <h4>Company</h4>
               <ul>
-                <li>Products</li>
-                <li>Teams</li>
-                <li>Gallery</li>
-                <li>Partners</li>
+                <Link to='/products'><li>Products</li></Link>
+                <Link to='/teams'><li>Teams</li></Link>
+                <Link to='/gallery'><li>Gallery</li></Link>
+                <Link to='/partners'><li>Partners</li></Link>
               </ul>
             </div>
 
@@ -43,7 +46,6 @@ const Footer = () => {
               <ul>
                 <li><PhoneIcon/> +234 802 365 2667</li>
                 <li><EmailIcon/> info@bbofarmventures.com</li>
-                <li><EmailIcon /> bbofarmventures@gmail.com</li>
               </ul>
             </div>
 
@@ -62,7 +64,7 @@ const Footer = () => {
       </div>
 
 
-    </footer>
+    </Box>
   )
 }
 

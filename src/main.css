@@ -7,6 +7,11 @@
     font-family: inter;
 }
 
+.active:hover{
+    border-bottom: 2.5px solid gray;
+    padding-bottom: 5px;
+}
+
 .img{
     width: 100%;
     height: 550px;

@@ -7,9 +7,17 @@ import Slide from 'react-reveal/Slide'
 import first from './assets/1.jpeg'
 import second from './assets/2.jpeg'
 import third from './assets/3.jpeg'
-// import fourth from './assets/4.jpeg'
+import fourth from './assets/gallery1.jpeg'
 import fifth from './assets/5.jpeg'
 import sixth from './assets/6.jpeg'
+import seventh from './assets/gallery2.jpeg'
+import eight from './assets/gallery3.jpeg'
+import nineth from './assets/gallery4.jpeg'
+import tenth from './assets/gallery5.jpeg'
+import house from './assets/house.jpeg'
+import house1 from './assets/house1.jpeg'
+import house2 from './assets/house2.jpeg'
+import house4 from './assets/house4.jpeg'
 
 const Gallery = () => {
   return (
@@ -23,23 +31,44 @@ const Gallery = () => {
 
           <Box mb='80px'>
               <Flex justifyContent={'space-around'} flexWrap={'wrap'} alignItems='center'>
-                  <Box w='200px' mb='9'>
-                      <Image src={third} />
+                  <Box w='300px' mb='9' boxShadow={'xl'}>
+                      <Image src={sixth} borderRadius='md' />
                   </Box>
-                  <Box w='200px' mb='9'>
-                      <Image src={sixth} />
+                  <Box w='250px' mb='9' boxShadow={'xl'}>
+                      <Image src={fourth} borderRadius='md' />
                   </Box>
-                  <Box w='200px' mb='9'>
-                      {/* <Image src={fourth} /> */}
+                  <Box w='250px' mb='9' boxShadow={'xl'}>
+                      <Image src={fifth} borderRadius='md' />
                   </Box>
-                  <Box w='200px' mb='9'>
-                      <Image src={fifth} />
+                  <Box w='300px' mb='9' boxShadow={'xl'}>
+                      <Image src={tenth} borderRadius='md' />
                   </Box>
-                  <Box w='200px' mb='9'>
-                      <Image src={first} />
+                  <Box w='300px' mb='9' boxShadow={'xl'}>
+                      <Image src={eight} borderRadius='md' />
                   </Box>
-                  <Box w='200px' mb='9'>
-                      <Image src={second} />
+                  <Box w='250px' mb='9' boxShadow={'xl'}>
+                      <Image src={first} borderRadius='md' />
+                  </Box>
+                  <Box w='250px' mb='9' boxShadow={'xl'}>
+                      <Image src={second} borderRadius='md' />
+                  </Box>
+                  <Box w='250px' mb='9' boxShadow={'xl'}>
+                      <Image src={seventh} borderRadius='md' />
+                  </Box>
+                  <Box w='250px' mb='9' boxShadow={'xl'}>
+                      <Image src={nineth} borderRadius='md' />
+                  </Box>
+                  <Box w='250px' mb='9' boxShadow={'xl'}>
+                      <Image src={house} borderRadius='md' />
+                  </Box>
+                  <Box w='250px' mb='9' boxShadow={'xl'}>
+                      <Image src={house1} borderRadius='md' />
+                  </Box>
+                  <Box w='250px' mb='9' boxShadow={'xl'}>
+                      <Image src={house2} borderRadius='md' />
+                  </Box>
+                  <Box w='250px' mb='9' boxShadow={'xl'}>
+                      <Image src={house4} borderRadius='md' />
                   </Box>
               </Flex>
           </Box>
