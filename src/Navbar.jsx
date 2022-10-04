@@ -1,19 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { ReactNode } from 'react';
+// import {Link} from 'react-scroll'
 import logo from './assets/obb.png'
+import { Link } from 'react-router-dom';
 import {
     Box,
     Flex,
     Avatar,
     HStack,
-    Link,
     IconButton,
-    Button,
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    MenuDivider,
     useDisclosure,
     useColorModeValue,
     Heading,
@@ -22,7 +17,8 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
-const Links = ['Home','About Us', 'Mission', 'Vision', 'Team', 'Gallery', 'Products'];
+
+
 
 const NavLink = ({ children }, { children: ReactNode }) => (
     <Link
@@ -40,6 +36,10 @@ const NavLink = ({ children }, { children: ReactNode }) => (
 
 export default function Navbar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const [show, setShow] = useState(true)
+    const hideNav = () => {
+
+    }
 
     return (
         <>
@@ -52,32 +52,78 @@ export default function Navbar() {
                         display={{ md: 'none' }}
                         onClick={isOpen ? onClose : onOpen}
                     />
-                    <HStack spacing={8} alignItems={'center'}>
+                    <HStack spacing={13} alignItems={'center'}>
                         <HStack
                             as={'nav'}
                             spacing={4}
                             display={{ base: 'none', md: 'flex' }}>
-                            {Links.map((link) => (
-                                <NavLink key={link}>{link}</NavLink>
-                            ))}
+                                <Link to='/'>
+                                    Home
+                                </Link>
+
+                                <Link to='/about'>
+                                    Our Company
+                                </Link>
+
+                                <Link to='/products'>Products</Link>
+
+                                <Link to='/teams'>
+                                    Teams
+                                </Link>
+
+                                <Link to='/gallery'>
+                                    Gallery
+                                </Link>
+
+                                <Link to='/partners'>
+                                    Partners
+                                </Link>
+
+                                <Link to='/contact'>
+                                    Contact us
+                                </Link>
                         </HStack>
                     </HStack>
+                    <Link to='/'>
                     <Flex alignItems={'center'}>
-                            <Image src={logo} w='70px' />
-                            <Heading size='md'>BBO Farms Ventures</Heading>
                         
+                            <Image src={logo} w='70px' />
+                            <Heading size='md'>BBO Farm Ventures</Heading>
                     </Flex>
+                    </Link>
                 </Flex>
 
+        
                 {isOpen ? (
-                    <Box pb={4} display={{ md: 'none' }}>
-                        <Stack as={'nav'} spacing={4}>
-                            {Links.map((link) => (
-                                <NavLink key={link}>{link}</NavLink>
-                            ))}
-                        </Stack>
-                    </Box>
+                    <Box pb={4} display={{ md: 'none' }} onClick={() => setShow(false)}>
+                        
+                            
+                            <Stack as={'nav'} spacing={4}>
+                                <Link to='/'>Home</Link>
+                                <Link to='/about'>Our Company</Link>
+                                <Link to='/products'>Products</Link>
+
+                                <Link to='/teams'>
+                                    Teams
+                                </Link>
+
+                                <Link to='/gallery'>
+                                    Gallery
+                                </Link>
+
+                                <Link to='/partners'>
+                                    Partners
+                                </Link>
+
+                                <Link to='/contact'>
+                                    Contact us
+                                </Link>
+                            </Stack>
+
+                            
+                        </Box>
                 ) : null}
+        
             </Box>
         </>
     );
