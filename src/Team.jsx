@@ -65,7 +65,7 @@ const Team = () => {
                           <Box border={'lightgray'} maxW='350px' p='4' bg='gray.200' borderRadius={'md'} mb='6' boxShadow={'xl'} dropShadow='lg' >
                               <Box textAlign={'center'} mb='5'>
                                   <Avatar src={ceo} size={'xl'} mb='3' />
-                                  <Heading size='sm' mb='3'>ODUNUGA BABATUNDE</Heading>
+                                  <Heading size='sm' mb='3'>ODUNUGA BOLUTIFE .B</Heading>
                                   <Text mb='2'>C.E.O</Text>
                                   <Text>BSc, MBA - Business in Emerging Market</Text>
                               </Box>

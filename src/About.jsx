@@ -141,7 +141,7 @@ const About = () => {
                                       businesses are being carried out. "</em>
                               </Text>
                              
-                              <Text fontWeight={'bold'} textAlign='right'> - Babatunde Odunuga</Text>
+                              <Text fontWeight={'bold'} textAlign='right'> - Odunuga Bolutife .B</Text>
                           </Box>
                       </Slide>
                   </Flex>

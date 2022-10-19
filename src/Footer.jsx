@@ -44,7 +44,7 @@ const Footer = () => {
             <div className={styles.link_list}>
               <h4>Quick Links</h4>
               <ul>
-                <li><PhoneIcon/> +234 802 365 2667</li>
+                <li><PhoneIcon/> +234 706 6198 767</li>
                 <li><EmailIcon/> info@bbofarmventures.com</li>
               </ul>
             </div>

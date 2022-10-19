@@ -9,7 +9,7 @@ import Gallery from './Gallery'
 import Contact from './Contact'
 import Partner from './Partner'
 import Products from './Products'
-
+import Test from './Test'
 
 function App() {
   const [count, setCount] = useState(0)
